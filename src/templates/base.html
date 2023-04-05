@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ze.wtf | {% block title %} {{ request.endpoint.split('.')[1].title() }} {% endblock %}</title>
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+                <a href="#" class="link">
+                    <span class="link-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </span>
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+            <li class="right">
+                <a href="#" class="link">
+                    <span class="link-icon">
+                        <i class="fa-solid fa-user"></i>
+                    </span>
+                    <span class="link-text">Login</span>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="main">
+        {% block content %} {% endblock %}
+    </div>
+
+    <footer>
+        <hr>
+        <i class="fa-solid fa-copyright"></i> <a href="./">ze.wtf</a> 2023, 20,000 links generated
+    </footer>
+</body>
+</html>

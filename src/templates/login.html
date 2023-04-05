@@ -1,61 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ze.wtf</title>
-    <link rel="stylesheet" type="text/css" href="../static/style.css">
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="container navbar-inner">
-        <ul class="navbar-menu">
-          <li>
-            <a href="#" class="navbar-logo">ze.wtf</a>
-          </li>
-        </ul>
-        <ul class="navbar-menu navbar-menu-right">
-          <li>
-            <a href="#">Login</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="content content-centered">
-      <div class="card card-small">
-        <form class="login">
-          <div class="login-text">Login</div>
-          <input type="text" placeholder="Username or E-mail" />
-          <input type="text" placeholder="Password" />
-          <input type="submit" value="Lets go">
-          <a href="#" class="login-link">Don't have an account?</a>
-        </form>
-      </div>
-    </div>
-
-    <div class="container">
-      <div class="footer">
-        <ul class="footer-menu">
-          <li>
-            <a href="#">ze.wtf</a>
-          </li>
-          <li>
-            <span>Links: &lt;links_count&gt;</span>
-          </li>
-        </ul>
-        <ul class="footer-menu footer-menu-right">
-          <li>
-            <a href="#">API</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Terms Of Service</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+    <form class="homepage">
+        <div class="container">
+            <span>Log in</span>
+            <input type="text" placeholder="Username or E-mail">
+            <input type="password" placeholder="Password">
+            <label>
+                <input type="checkbox" value="remember">
+                Remember me
+            </label>
+            <button>Lets go</button>
+            <div class="center">
+                <a href="#">Don't have an account?</a>
+            </div>
+        </div>
+    </form>
+{% endblock %}
